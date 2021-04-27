@@ -17,7 +17,7 @@ var peopleArray = [
     {
         firstName: "Morty",
         lastName: "Smith",
-        age: 29
+        age: 17
     },
     {
         firstName: "Kyle",
@@ -32,6 +32,11 @@ var peopleArray = [
     {
         firstName: "Lev",
         lastName: "Tolstoy",
-        age: 82
+        age: 6
     }
 ]
+
+
+const oldEnough = peopleArray.filter(a => a.age >= 18)
+const sortLast = oldEnough.sort((a,b) => a.firstName === b.firstName ? 0 : a.firstName > b.lastName)
+console.log(sortLast)
